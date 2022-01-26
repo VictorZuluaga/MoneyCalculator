@@ -1,6 +1,8 @@
 
 package modelo;
 
+import vista.vistaModelo;
+
 public class conversor {
     
     private final divisa d1;
@@ -13,7 +15,7 @@ public class conversor {
         this.cantidad = cantidad;
     }
     
-    public float conversion(){
+    public void conversion(vistaModelo v1){
         String url_1 = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
         String div_1 = "/"+this.d1.getCodigo().toLowerCase();
         String div_2 = "/"+this.d2.getCodigo().toLowerCase();
@@ -21,7 +23,8 @@ public class conversor {
         float ratio = servicioWeb.mostrarContenido(url_1+div_1+div_2+url_2);
         float resultado = cantidad*ratio;
         resultado = Math.round(resultado * 100f) / 100f;
-        return resultado;
+        //actualización de la vista atraves del modelo
+        v1.setConversion(resultado);
     }
     
     
