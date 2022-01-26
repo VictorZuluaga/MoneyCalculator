@@ -29,7 +29,7 @@ public class divisa {
     }
     
     private static String info(String nombre) throws Exception{
-        File fichero = new File("divisas.txt");
+        File fichero = new File("currencies.txt");
         BufferedReader bf = new BufferedReader(new FileReader(fichero));
         String linea = bf.readLine();
         String resultado = null;

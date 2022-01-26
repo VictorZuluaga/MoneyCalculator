@@ -1,0 +1,5 @@
+USD, Dólar USA, $
+CAD, Dólar Canadá, $
+EUR, Euro, € 
+COP, Peso Colombiano, $
+GBP, Libra Esterlina, $

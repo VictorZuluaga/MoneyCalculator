@@ -11,7 +11,7 @@ public class listaDivisas {
     public static ArrayList<String> lista(){
         ArrayList<String> resultado = new ArrayList<>();
         try{
-            BufferedReader bf = new BufferedReader(new FileReader("divisas.txt"));
+            BufferedReader bf = new BufferedReader(new FileReader("currencies.txt"));
             String linea = bf.readLine();
             String aux = null;
             int ini = 0;
